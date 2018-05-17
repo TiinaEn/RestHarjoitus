@@ -1,7 +1,6 @@
 package fi.academy;
 
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -16,7 +15,7 @@ public class Koulu {
     String kaupunki;
     @JsonIgnore
     @OneToMany(mappedBy = "koulu")    //  tämä "koulu" viittaa Oppilasluokan private Koulu kouluun (jälkimm.kouluun)
-    private List <Oppilas> oppilaat;
+    private List<Oppilas> oppilaat;
 
     public Koulu() {
     }

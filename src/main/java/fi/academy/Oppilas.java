@@ -1,7 +1,6 @@
 package fi.academy;
 
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -9,13 +8,14 @@ import javax.persistence.*;
 
 @Entity
 public class Oppilas {
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     private Integer id;
     private String nimi;
     private Integer ika;
 
     @ManyToOne//(cascade = CascadeType.ALL)
-    @JoinColumn (name = "koulu")
+    @JoinColumn(name = "koulu")
     private Koulu koulu;
 
 
